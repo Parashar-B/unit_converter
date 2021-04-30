@@ -1,0 +1,47 @@
+body{
+    background: #242B2E;
+    font-family: Courier New;
+}
+h1{
+    color:#8D3DAF;
+    background-color: #CAD5E2;
+    width: 278;
+    padding-left: 8px;
+    border: 3px solid orange;
+    border-radius: 12px;
+}
+p{
+    position: absolute;
+    color:white;
+    top:17;
+    left:310;
+}
+#head{
+    border-bottom: 2px solid white ;
+    height:50;
+}
+table{
+    position:absolute;
+    top:100;
+    left:300;
+}
+td{
+    padding:10;
+}
+
+button.m{
+    width: 110;
+    background-color: #E07C24;
+    font-size: 40;
+    padding: 0;
+    border:3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label{
+    font-family: Courier New;
+    font-size:15;
+    cursor: pointer;
+}
+
