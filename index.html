@@ -6,17 +6,40 @@
     <body>
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
         <div id="menu">
-            <table>
+            <select id="sub">
+                <option>Length</option>
+                <option>Temperature</option>
+                <option>Mass</option>
+                <option>Time</option>
+            </select>
+            <table >
                 <tr>
-                    <td><button class="m" type="button">T<br><label>TEMPERATURE</label></button></td>
-                    <td><button class="m" type="button">M<br><label>MASS</label></button></td>
-                    <td><button class="m" type="button">L<br><label>LENGTH</label></button></td>
+                    <td id="from">FROM
+                        <select id="fs">
+                            <option>Kilometer</option>
+                            <option>Meter</option>
+                            <option>Centimeter</option>
+                            <option>Foot</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td><input class="in" id ="fi" type="number" placeholder="Enter value"></td>
                 </tr>
+                <tr id="blank"></tr>
                 <tr>
+                    <td id="to">TO
+                        <select id="ts">
+                            <option>Kilometer</option>
+                            <option>Meter</option>
+                            <option>Centimeter</option>
+                            <option>Foot</option>
+                        </select>
+                    </td>
                     <td></td>
-                    <td></td>
+                    <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
+            <button>CONVERT</button>
         </div>
     </body>
 </html>

@@ -1,25 +1,36 @@
 body{
     background: #242B2E;
-    font-family: Courier New;
+    font-family:Arial;
 }
 h1{
-    color:#8D3DAF;
-    background-color: #CAD5E2;
-    width: 278;
-    padding-left: 8px;
-    border: 3px solid orange;
-    border-radius: 12px;
+    position: absolute;
+    top:-10;
+    left:100;
+    color:#8D3DAF;   
+    
 }
 p{
     position: absolute;
+    top:30px;
+    left: 160;
     color:white;
-    top:17;
-    left:310;
+    
+    
 }
+
 #head{
+    position: absolute;
+    left: 430;
+    top:5px;
+     
     border-bottom: 2px solid white ;
-    height:50;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 0px 0px 10px 10px;
+    height:70;
+    width:480;
 }
+
 table{
     position:absolute;
     top:100;
@@ -29,19 +40,92 @@ td{
     padding:10;
 }
 
-button.m{
-    width: 110;
-    background-color: #E07C24;
-    font-size: 40;
-    padding: 0;
-    border:3px solid white;
-    border-radius: 10px;
-    cursor: pointer;
+#menu{
+    position: absolute;
+    top: 100px;
+    left:430px;
+    
+    width:484px;
+    height:500px;
 }
 
-label{
-    font-family: Courier New;
-    font-size:15;
-    cursor: pointer;
+#sub{
+    position: absolute;
+    top: 5px;
+    left:170px;
+    width: 150px;
+    height: 40px;
+    background-color: chocolate;
+    font-size:large;
+    border: 1px solid chocolate;
+    border-radius: 5px;
 }
 
+table{
+    position: absolute;
+    top: 100px;
+    left:20px;
+    
+}
+
+#from{
+    border:2px solid white;
+    border-radius: 5px;
+    background-color:#104D69;
+    color: white;
+}
+
+#fs{
+    width: 150px;
+    height: 40px;
+    background-color: chocolate;
+    font-size:large;
+    border: 1px solid chocolate;
+    border-radius: 5px;
+}
+
+#to{
+    border:2px solid white;
+    
+    border-radius: 5px;
+    background-color:#104D69;
+    color: white;
+}
+
+#ts{
+    width: 150px;
+    height: 40px;
+    background-color: chocolate;
+    font-size:large;
+    border: 1px solid chocolate;
+    border-radius: 5px;
+}
+
+#blank{
+    height:70;
+}
+
+.in{
+    background-color: #242B2E;
+    height:50;
+    width: 250;
+    border-bottom: 2px solid white;
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+    color: white;
+    font-size: medium;
+}
+
+button{
+    position: absolute;
+    top:400;
+    left:180;
+    background-color:chocolate;
+    cursor: pointer;
+    width: 150;
+    height:40;
+    padding:px;
+    font-size: large;
+    border-radius: 20px;
+}
