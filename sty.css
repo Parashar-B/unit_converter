@@ -30,6 +30,70 @@ p{
     height:70;
     width:480;
 }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 36px;
+    left:920;
+    top:10;
+  }
+
+  .switch input {
+    position: relative;
+    left:40;
+    top:5;
+    opacity: 1;
+    width: 20;
+    height: 20;
+    
+  }
+  .slider.round {
+    border-radius: 40px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .slider.round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border:2px solid chocolate;
+    background-color:#242B2E;
+    
+    font-size:x-small;
+    padding-left: 5px;
+    padding-top: 11;
+    padding-bottom: 10;
+    color: white;
+  }
+  .slider.round:before {
+    position: absolute;
+    content: "";
+    font-size:smaller;
+    height: 26px;
+    width: 26px;
+    top:3px;
+    left: 73px;
+    bottom: 4px;
+    background-color: #12B0E8;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider.round {
+    background-color:#242B2E;
+  }
+  
+  
+  input:checked + .slider.round:before {
+    -webkit-transform: translateX(-68px);
+    transform: translateX(-68px);
+  }
+  
 
 table{
     position:absolute;
@@ -48,6 +112,9 @@ td{
     width:484px;
     height:500px;
 }
+select{
+    cursor: pointer;
+}
 
 #sub{
     position: absolute;
@@ -55,7 +122,7 @@ td{
     left:170px;
     width: 150px;
     height: 40px;
-    background-color: chocolate;
+    background-color: #d2691e;
     font-size:large;
     border: 1px solid chocolate;
     border-radius: 5px;
@@ -68,10 +135,10 @@ table{
     
 }
 
-#from{
-    border:2px solid white;
+.unit{
+    border:2px solid black;
     border-radius: 5px;
-    background-color:#104D69;
+    background-color:#094059;
     color: white;
 }
 
@@ -82,14 +149,6 @@ table{
     font-size:large;
     border: 1px solid chocolate;
     border-radius: 5px;
-}
-
-#to{
-    border:2px solid white;
-    
-    border-radius: 5px;
-    background-color:#104D69;
-    color: white;
 }
 
 #ts{
@@ -127,5 +186,19 @@ button{
     height:40;
     padding:px;
     font-size: large;
-    border-radius: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+}
+button:hover{
+    box-shadow: 0 2px 3px 0 #5C6464, 0 2px 3px 0 #5C6464;
+}
+
+#love{
+    color: #12B0E8;
+}
+#footer{
+    position: absolute;
+    top: 600;
+    left: 580;
+    font-size:smaller;
 }

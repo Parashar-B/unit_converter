@@ -1,10 +1,15 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="sty.css">
+        <script src="convert.js"></script>
         <title>UNIT-CONVERTER</title>
     </head>
     <body>
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
+        <label class="switch" >
+            <input type="checkbox" onclick="mode_change()">
+            <span class="slider round" id="mode_label">DARK-MODE</span>
+        </label>
         <div id="menu">
             <select id="sub">
                 <option>Length</option>
@@ -14,7 +19,7 @@
             </select>
             <table >
                 <tr>
-                    <td id="from">FROM
+                    <td class="unit">FROM
                         <select id="fs">
                             <option>Kilometer</option>
                             <option>Meter</option>
@@ -27,7 +32,7 @@
                 </tr>
                 <tr id="blank"></tr>
                 <tr>
-                    <td id="to">TO
+                    <td class="unit">TO
                         <select id="ts">
                             <option>Kilometer</option>
                             <option>Meter</option>
@@ -41,5 +46,6 @@
             </table>
             <button>CONVERT</button>
         </div>
+        <p id="footer">MADE WITH <span id="love">❤️</span> BY PARASHAR-B</p>
     </body>
 </html>
