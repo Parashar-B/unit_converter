@@ -43,6 +43,9 @@ p{
     cursor: pointer;
     color: white;
   }
+#switch:focus{
+    outline:none;
+}
 
 #mode_indicator{
     position: absolute;
