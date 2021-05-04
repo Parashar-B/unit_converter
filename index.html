@@ -6,18 +6,19 @@
     </head>
     <body>
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
-        <label class="switch" >
-            <input type="checkbox" onclick="mode_change()">
-            <span class="slider round" id="mode_label">DARK-MODE</span>
-        </label>
+        <div id="switch" onclick="mode_change()">
+            <span id="mode_indicator">DARK-MODE</span>
+            <div id="mode_dot"></div>
+        </div>
+        <select id="sub">
+            <option>Length</option>
+            <option>Temperature</option>
+            <option>Mass</option>
+            <option>Time</option>
+            <option>Data</option>
+        </select>
         <div id="menu">
-            <select id="sub">
-                <option>Length</option>
-                <option>Temperature</option>
-                <option>Mass</option>
-                <option>Time</option>
-            </select>
-            <table >
+                        <table >
                 <tr>
                     <td class="unit">FROM
                         <select id="fs">
@@ -29,6 +30,7 @@
                     </td>
                     <td></td>
                     <td><input class="in" id ="fi" type="number" placeholder="Enter value"></td>
+                    
                 </tr>
                 <tr id="blank"></tr>
                 <tr>
@@ -44,7 +46,7 @@
                     <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
-            <button>CONVERT</button>
+            <button id="con">CONVERT</button>
         </div>
         <p id="footer">MADE WITH <span id="love">❤️</span> BY PARASHAR-B</p>
     </body>
