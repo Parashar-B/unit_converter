@@ -10,12 +10,12 @@
             <span id="mode_indicator">DARK-MODE</span>
             <div id="mode_dot"></div>
         </div>
-        <select id="sub">
-            <option>Length</option>
-            <option>Temperature</option>
-            <option>Mass</option>
-            <option>Time</option>
-            <option>Data</option>
+        <select id="sub" onchange="unit_changer()">
+            <option value="length">Length</option>
+            <option value="temperature">Temperature</option>
+            <option value="mass">Mass</option>
+            <option value="time">Time</option>
+            <option value="data">Data</option>
         </select>
         <div id="menu">
                         <table >
@@ -46,7 +46,7 @@
                     <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
-            <button id="con">CONVERT</button>
+            <button>CONVERT</button>
         </div>
         <p id="footer">MADE WITH <span id="love">❤️</span> BY PARASHAR-B</p>
     </body>

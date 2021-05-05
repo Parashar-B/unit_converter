@@ -43,6 +43,9 @@ p{
     cursor: pointer;
     color: white;
   }
+#switch:focus{
+    outline:none;
+}
 
 #mode_indicator{
     position: absolute;
@@ -147,7 +150,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-#con{
+button{
     position: absolute;
     top:400;
     left:222px;
@@ -160,7 +163,10 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
     border-width: 5px;
 }
-#con:hover{
+button:focus{
+    outline: none;
+}
+button:hover{
     box-shadow: 0 2px 3px 0 #5C6464, 0 2px 3px 0 #5C6464;
 }
 
