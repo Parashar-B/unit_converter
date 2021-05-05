@@ -54,3 +54,20 @@ function dark_mode()
     document.getElementsByClassName("in")[1].style.color="white";
 }
 
+function unit_changer()
+{
+    var x=document.getElementById("sub").value;
+    switch(x)
+    {
+        case "length" : alert("L");break;
+
+        case "temperature" : alert("T");break;
+
+        case "mass" : alert("M");break;
+
+        case "time" : alert("T");break;
+
+        case "data" :alert("D");break;
+        default : alert("NO");
+    }
+}
