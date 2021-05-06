@@ -4,7 +4,7 @@
         <script src="convert.js"></script>
         <title>UNIT-CONVERTER</title>
     </head>
-    <body>
+    <body onload="unit_l()">
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
         <div id="switch" onclick="mode_change()">
             <span id="mode_indicator">DARK-MODE</span>
@@ -21,12 +21,7 @@
                         <table >
                 <tr>
                     <td class="unit">FROM
-                        <select id="fs">
-                            <option>Kilometer</option>
-                            <option>Meter</option>
-                            <option>Centimeter</option>
-                            <option>Foot</option>
-                        </select>
+                        <select id="fs"></select>
                     </td>
                     <td></td>
                     <td><input class="in" id ="fi" type="number" placeholder="Enter value"></td>
@@ -35,12 +30,7 @@
                 <tr id="blank"></tr>
                 <tr>
                     <td class="unit">TO
-                        <select id="ts">
-                            <option>Kilometer</option>
-                            <option>Meter</option>
-                            <option>Centimeter</option>
-                            <option>Foot</option>
-                        </select>
+                        <select id="ts"></select>
                     </td>
                     <td></td>
                     <td><input class="in" id="ti" type="number" disabled></td></td>
