@@ -1,4 +1,5 @@
 var m="DARK";
+var f="l"; // to know which domain(length/mass/...) is selected
 function mode_change(){
     if(m=="DARK")
        { m="LIGHT";
@@ -54,14 +55,14 @@ function dark_mode()
     document.getElementsByClassName("in")[1].style.color="white";
 }
 
-function unit_changer()
+function unit_changer() // first function to handle the unit change as per Domain change
 {
     var x=document.getElementById("sub").value;
     switch(x)
     {
-        case "length" : alert("L");break;
+        case "length" : remove_unit();unit_l();break;
 
-        case "temperature" : alert("T");break;
+        case "temperature" :remove_unit(); unit_t();break;
 
         case "mass" : alert("M");break;
 
@@ -70,4 +71,64 @@ function unit_changer()
         case "data" :alert("D");break;
         default : alert("NO");
     }
+}
+
+function remove_unit() // to remove option from drop-down UNIT and empty the list for new UNIT
+{
+    var z;
+    switch(f)
+    {
+        case "l": z=4;
+        case "t": z=3;
+    }
+    var s=document.getElementById("fs");
+    var t=document.getElementById("ts");
+    while(z>=0)
+    {
+        s.remove(z);
+        t.remove(z);
+        z--;
+    }
+}
+
+function unit_l()   //it handles the unit of "LENGTH"
+{
+    var a=["Kilometer(km)","Meter(m)","Centimeter(cm)","Foot(ft)"];
+    var i;
+    var x=document.getElementById("fs");
+    var w=document.getElementById("ts");
+    for(i=0;i<4;i++)
+    {
+        for(var j=2;j>0;j--) //2nd loop is for adding unit in both "FROM" and "TO"
+        {
+            var y=document.createElement("option");
+            y.text=a[i];
+            if(j==2)
+            x.add(y);
+            else
+            w.add(y);
+        }
+    }
+    f="l";
+}
+
+function unit_t() //it handles the unit of "TEMPERATURE"
+{
+    var a=["Celsius(°C)","Fahrenheit(°F)","Kelvin(°K)"];
+    var i;
+    var x=document.getElementById("fs");
+    var w=document.getElementById("ts");
+    for(i=0;i<3;i++)
+    {
+        for(var j=2;j>0;j--) //2nd loop is for adding unit in both "FROM" and "TO"
+        {
+            var y=document.createElement("option");
+            y.text=a[i];
+            if(j==2)
+            x.add(y);
+            else
+            w.add(y);
+        }
+    }
+    f="t";
 }
