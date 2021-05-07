@@ -13,9 +13,7 @@ p{
     position: absolute;
     top:30px;
     left: 160;
-    color:white;
-    
-    
+    color:white;    
 }
 
 #head{
@@ -89,11 +87,16 @@ select{
     border-radius: 5px;
 }
 
+
+option{
+    background-color: #1FAA59;
+}
+
+
 table{
     position:absolute;
     top:60;
     left:0;
-    
 }
 td{
     padding:10;

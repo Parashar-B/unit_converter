@@ -62,13 +62,13 @@ function unit_changer() // first function to handle the unit change as per Domai
     {
         case "length" : remove_unit();unit_l();break;
 
-        case "temperature" :remove_unit(); unit_t();break;
+        case "temperature" :remove_unit(); unit_tem();break;
 
-        case "mass" : alert("M");break;
+        case "mass" : remove_unit(); unit_m();break;
 
-        case "time" : alert("T");break;
+        case "time" : remove_unit();unit_ti();break;
 
-        case "data" :alert("D");break;
+        case "data" :remove_unit();unit_d();break;
         default : alert("NO");
     }
 }
@@ -79,7 +79,10 @@ function remove_unit() // to remove option from drop-down UNIT and empty the lis
     switch(f)
     {
         case "l": z=4;
-        case "t": z=3;
+        case "tem": z=3;
+        case "m": z=5;
+        case "ti": z=3;
+        case "d":z=5;
     }
     var s=document.getElementById("fs");
     var t=document.getElementById("ts");
@@ -112,7 +115,7 @@ function unit_l()   //it handles the unit of "LENGTH"
     f="l";
 }
 
-function unit_t() //it handles the unit of "TEMPERATURE"
+function unit_tem() //it handles the unit of "TEMPERATURE"
 {
     var a=["Celsius(°C)","Fahrenheit(°F)","Kelvin(°K)"];
     var i;
@@ -130,5 +133,68 @@ function unit_t() //it handles the unit of "TEMPERATURE"
             w.add(y);
         }
     }
-    f="t";
+    f="tem";
+}
+
+function unit_m() //it handles the unit of "TEMPERATURE"
+{
+    var a=["Kilogram(kg)","Gram(gm)","Milligram(mg)","Pound(lb)","Tonne(t)"];
+    var i;
+    var x=document.getElementById("fs");
+    var w=document.getElementById("ts");
+    for(i=0;i<5;i++)
+    {
+        for(var j=2;j>0;j--) //2nd loop is for adding unit in both "FROM" and "TO"
+        {
+            var y=document.createElement("option");
+            y.text=a[i];
+            if(j==2)
+            x.add(y);
+            else
+            w.add(y);
+        }
+    }
+    f="m";
+}
+
+function unit_ti() //it handles the unit of "TEMPERATURE"
+{
+    var a=["Second(s)","Minute(min)","Hour(hr)"];
+    var i;
+    var x=document.getElementById("fs");
+    var w=document.getElementById("ts");
+    for(i=0;i<3;i++)
+    {
+        for(var j=2;j>0;j--) //2nd loop is for adding unit in both "FROM" and "TO"
+        {
+            var y=document.createElement("option");
+            y.text=a[i];
+            if(j==2)
+            x.add(y);
+            else
+            w.add(y);
+        }
+    }
+    f="ti";
+}
+
+function unit_d() //it handles the unit of "TEMPERATURE"
+{
+    var a=["Byte(B)","Kilobyte(KB)","Megabyte(MB)","Gigabyte(GB)","Terabyte(TB)"];
+    var i;
+    var x=document.getElementById("fs");
+    var w=document.getElementById("ts");
+    for(i=0;i<5;i++)
+    {
+        for(var j=2;j>0;j--) //2nd loop is for adding unit in both "FROM" and "TO"
+        {
+            var y=document.createElement("option");
+            y.text=a[i];
+            if(j==2)
+            x.add(y);
+            else
+            w.add(y);
+        }
+    }
+    f="d";
 }
