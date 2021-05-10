@@ -198,3 +198,10 @@ function unit_d() //it handles the unit of "TEMPERATURE"
     }
     f="d";
 }
+
+function check(){
+    if(document.getElementById("fi").value =="")
+        alert("Blank");
+    else
+        alert(document.getElementById("fi").value);
+}
