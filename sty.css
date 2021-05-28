@@ -34,8 +34,8 @@ p{
     left:950px;
     top:20px;
     background-color:black;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     border-radius: 50px;
     border:1px solid gray;
@@ -55,45 +55,9 @@ h2{
 }
 
 #dark{
-    color: #8E9697;
+    color: gray;
     
 }
-
-#switch {
-    position: absolute;
-    width: 100px;
-    height: 33px;
-    left:930;
-    top:20;
-    border:2px solid chocolate;
-    border-radius: 40px;
-    background-color:#242B2E;
-    font-size:x-small;
-    cursor: pointer;
-    color: white;
-  }
-#switch:focus{
-    outline:none;
-}
-
-#mode_indicator{
-    position: absolute;
-    top:11px;
-    left:5px;
-}
-
-#mode_dot{
-    position:absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    top:3px;
-    left: 69px;
-    bottom: 4px;
-    background-color: #12B0E8;
-    border-radius: 50%;
-  } 
-  
 #menu{
     position: absolute;
     top: 70px;
