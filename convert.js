@@ -1,25 +1,7 @@
 var m="DARK";
 var f="l"; // to know which domain(length/mass/...) is selected
-function mode_change(){
-    if(m=="DARK")
-       { m="LIGHT";
-         light_mode();}
-    else
-        {m="DARK";
-         dark_mode();}
-}
 
-function light_mode()
-{
-    var x=document.getElementById("switch");
-    x.style.backgroundColor="#E8BD0D";
-    x.style.color="black";
-    var y=document.getElementById("mode_indicator");
-    y.innerHTML="LIGHT-MODE";
-    y.style.left="34px";
-    var z=document.getElementById("mode_dot");
-    z.style.transition="left 0.2s";
-    z.style.left="5px";    
+function light_mode(){
     document.getElementsByTagName("body")[0].style.backgroundColor="#B4D9D4";
     document.getElementById("head").style.borderColor="black";
     document.getElementsByTagName("p")[0].style.color="black";
@@ -30,19 +12,12 @@ function light_mode()
     document.getElementsByClassName("in")[1].style.backgroundColor="#B4D9D4";
     document.getElementsByClassName("in")[1].style.borderColor="black";
     document.getElementsByClassName("in")[1].style.color="black";
+
+    document.getElementById("light").style.visibility="visible";
+    document.getElementById("dark").style.visibility="hidden";
 }
 
-function dark_mode()
-{
-    var x=document.getElementById("switch");
-    x.style.backgroundColor="#242B2E";
-    x.style.color="white";
-    var y=document.getElementById("mode_indicator");
-    y.innerHTML="DARK-MODE";
-    y.style.left="5px";
-    var z=document.getElementById("mode_dot");
-    z.style.transition="left 0.2s";
-    z.style.left="69px";    
+function dark_mode(){
     document.getElementsByTagName("body")[0].style.backgroundColor="#242B2E";
     document.getElementById("head").style.borderColor="white";
     document.getElementsByTagName("p")[0].style.color="white";
@@ -53,7 +28,11 @@ function dark_mode()
     document.getElementsByClassName("in")[1].style.backgroundColor="#242B2E";
     document.getElementsByClassName("in")[1].style.borderColor="white";
     document.getElementsByClassName("in")[1].style.color="white";
+
+    document.getElementById("light").style.visibility="hidden";
+    document.getElementById("dark").style.visibility="visible";
 }
+
 
 function unit_changer() // first function to handle the unit change as per Domain change
 {
@@ -136,7 +115,7 @@ function unit_tem() //it handles the unit of "TEMPERATURE"
     f="tem";
 }
 
-function unit_m() //it handles the unit of "TEMPERATURE"
+function unit_m() //it handles the unit of "MASS"
 {
     var a=["Kilogram(kg)","Gram(gm)","Milligram(mg)","Pound(lb)","Tonne(t)"];
     var i;
@@ -157,7 +136,7 @@ function unit_m() //it handles the unit of "TEMPERATURE"
     f="m";
 }
 
-function unit_ti() //it handles the unit of "TEMPERATURE"
+function unit_ti() //it handles the unit of "TIME"
 {
     var a=["Second(s)","Minute(min)","Hour(hr)"];
     var i;
@@ -178,7 +157,7 @@ function unit_ti() //it handles the unit of "TEMPERATURE"
     f="ti";
 }
 
-function unit_d() //it handles the unit of "TEMPERATURE"
+function unit_d() //it handles the unit of "DATA"
 {
     var a=["Byte(B)","Kilobyte(KB)","Megabyte(MB)","Gigabyte(GB)","Terabyte(TB)"];
     var i;
