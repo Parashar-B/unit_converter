@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
     <head>
-                <link rel="stylesheet" type="text/css" href="sty.css">
+        
+        <link rel="stylesheet" type="text/css" href="sty.css">
         <script src="convert.js"></script>
         <title>UNIT-CONVERTER</title>
     </head>
     <body onload="unit_l()">
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
-        <div id="switch" onclick="mode_change()">
-            <span id="mode_indicator">DARK-MODE</span>
-            <div id="mode_dot"></div>
+        <div id="mode">
+            <h2 id="light" onclick="dark_mode()">🔅</h2>
+            <h2 id="dark" onclick="light_mode()">🌙</h2>
         </div>
-        <select id="sub" onchange="unit_changer()">
+            <select id="sub" onchange="unit_changer()">
             <option value="length">Length</option>
             <option value="temperature">Temperature</option>
             <option value="mass">Mass</option>
@@ -39,6 +40,6 @@
             </table>
             <button onclick="check()">CONVERT</button>
         </div>
-        <p id="footer">MADE WITH <span id="love">❤️</span> BY PARASHAR-B</p>
+        <p id="footer">MADE WITH <span id="peace">☮</span> BY PARASHAR-B</p>
     </body>
 </html>

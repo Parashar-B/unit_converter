@@ -28,6 +28,37 @@ p{
     height:70;
     width:480;
 }
+
+#mode{
+    position: absolute;
+    left:950px;
+    top:20px;
+    background-color:black;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50px;
+    border:1px solid gray;
+    text-align: center;
+}
+
+
+h2{
+    color:#E8BD0D;
+    position: absolute;
+    top: -21px;
+    left: 4px;
+    z-index: 1;
+}
+#light{
+    visibility:hidden;
+}
+
+#dark{
+    color: #8E9697;
+    
+}
+
 #switch {
     position: absolute;
     width: 100px;
@@ -173,12 +204,14 @@ button:hover{
     box-shadow: 0 2px 3px 0 #5C6464, 0 2px 3px 0 #5C6464;
 }
 
-#love{
-    color: #12B0E8;
+#peace{
+    color:green;
+    font-size: large;
+    
 }
 #footer{
     position: absolute;
-    top: 600;
+    top: 595;
     left: 580;
     font-size:smaller;
 }
