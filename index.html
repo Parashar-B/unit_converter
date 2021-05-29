@@ -12,15 +12,22 @@
             <h2 id="light" onclick="dark_mode()">🔅</h2>
             <h2 id="dark" onclick="light_mode()">🌙</h2>
         </div>
-            <select id="sub" onchange="unit_changer()">
-            <option value="length">Length</option>
-            <option value="temperature">Temperature</option>
-            <option value="mass">Mass</option>
-            <option value="time">Time</option>
-            <option value="data">Data</option>
-        </select>
+        <div id="background_1"></div>
+        <div id="background_2"></div>
         <div id="menu">
-                        <table >
+            <table >
+                <tr>
+                    <td ></td>
+                    <td></td>
+                    <td id="sub_cell"><select id="sub" onchange="unit_changer()">
+                        <option value="length">Length</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="mass">Mass</option>
+                        <option value="time">Time</option>
+                        <option value="data">Data</option>
+                    </select></td>
+                </tr>
+                <tr id="small_blank"></tr>
                 <tr>
                     <td class="unit">FROM
                         <select id="fs"></select>
