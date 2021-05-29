@@ -1,33 +1,36 @@
 var m="DARK";
 var f="l"; // to know which domain(length/mass/...) is selected
 
+
 function light_mode(){
-    document.getElementsByTagName("body")[0].style.backgroundColor="#B4D9D4";
+    document.getElementsByTagName("body")[0].style.transition="background-color 0.3s";
+    document.getElementsByTagName("body")[0].style.backgroundColor="white";
     document.getElementById("head").style.borderColor="black";
     document.getElementsByTagName("p")[0].style.color="black";
     document.getElementsByTagName("p")[1].style.color="black";
-    document.getElementsByClassName("in")[0].style.backgroundColor="#B4D9D4";
     document.getElementsByClassName("in")[0].style.borderColor="black";
     document.getElementsByClassName("in")[0].style.color="black";
-    document.getElementsByClassName("in")[1].style.backgroundColor="#B4D9D4";
     document.getElementsByClassName("in")[1].style.borderColor="black";
     document.getElementsByClassName("in")[1].style.color="black";
+    document.getElementById("background_2").style.backgroundColor="lightgray";
+    document.getElementById("background_1").style.backgroundColor="lightgray";
 
     document.getElementById("light").style.visibility="visible";
     document.getElementById("dark").style.visibility="hidden";
 }
 
 function dark_mode(){
+    document.getElementsByTagName("body")[0].style.transition="background-color 0.3s";
     document.getElementsByTagName("body")[0].style.backgroundColor="#242B2E";
     document.getElementById("head").style.borderColor="white";
     document.getElementsByTagName("p")[0].style.color="white";
     document.getElementsByTagName("p")[1].style.color="white";
-    document.getElementsByClassName("in")[0].style.backgroundColor="#242B2E";
     document.getElementsByClassName("in")[0].style.borderColor="white";
     document.getElementsByClassName("in")[0].style.color="white";
-    document.getElementsByClassName("in")[1].style.backgroundColor="#242B2E";
     document.getElementsByClassName("in")[1].style.borderColor="white";
     document.getElementsByClassName("in")[1].style.color="white";
+    document.getElementById("background_2").style.backgroundColor="black";
+    document.getElementById("background_1").style.backgroundColor="black";
 
     document.getElementById("light").style.visibility="hidden";
     document.getElementById("dark").style.visibility="visible";
@@ -179,8 +182,5 @@ function unit_d() //it handles the unit of "DATA"
 }
 
 function check(){
-    if(document.getElementById("fi").value =="")
-        alert("Blank");
-    else
-        alert(document.getElementById("fi").value);
+    
 }

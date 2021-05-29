@@ -34,66 +34,29 @@ p{
     left:950px;
     top:20px;
     background-color:black;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
+    border: 2px solid gray;
     border-radius: 50px;
-    border:1px solid gray;
     text-align: center;
 }
 
 
 h2{
-    color:#E8BD0D;
-    position: absolute;
-    top: -21px;
-    left: 4px;
-    z-index: 1;
+    position:absolute;
+    left:5px;
+    margin: 0%;
 }
+
 #light{
     visibility:hidden;
+    color:#E8BD0D;
 }
 
 #dark{
-    color: #8E9697;
-    
+    color: gray;
 }
-
-#switch {
-    position: absolute;
-    width: 100px;
-    height: 33px;
-    left:930;
-    top:20;
-    border:2px solid chocolate;
-    border-radius: 40px;
-    background-color:#242B2E;
-    font-size:x-small;
-    cursor: pointer;
-    color: white;
-  }
-#switch:focus{
-    outline:none;
-}
-
-#mode_indicator{
-    position: absolute;
-    top:11px;
-    left:5px;
-}
-
-#mode_dot{
-    position:absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    top:3px;
-    left: 69px;
-    bottom: 4px;
-    background-color: #12B0E8;
-    border-radius: 50%;
-  } 
-  
 #menu{
     position: absolute;
     top: 70px;
@@ -105,32 +68,63 @@ h2{
 select{
     cursor: pointer;
 }
+#background_1{
+    position:absolute;
+    top:100px;
+    left:740px;
+    background-color:black;
+    width:175px;
+    height: 340px;
+    border-radius: 10px;
+    
+}
+
+#background_2{
+    position:absolute;
+    top:160px;
+    left:429px;
+    background-color:black;
+    width:485px;
+    height: 290px;
+    border-radius: 10px;
+    
+}
+
 
 #sub{
-    position: absolute;
-    top: 130px;
-    left:150px;
+    margin-top: 10px;  
+    margin-left: 10px;; 
     width: 150px;
     height: 40px;
     background-color: #d2691e;
     font-size:large;
     border: 1px solid chocolate;
     border-radius: 5px;
+    margin: 0%;
 }
 
 
 option{
-    background-color: #1FAA59;
+    background-color:slategray;
+    color: black;
 }
-
 
 table{
     position:absolute;
-    top:60;
-    left:0;
+    top:40px;
+    left:6px;
+    
+    
 }
+#sub_cell{
+    padding:0%;
+    padding-left: 110px;
+    
+}
+
 td{
     padding:10;
+    
 }
 
 .unit{
@@ -159,11 +153,14 @@ td{
 }
 
 #blank{
-    height:120;
+    height:90;
+}
+#small_blank{
+    height:20px;
 }
 
 .in{
-    background-color: #242B2E;
+    background: transparent;
     height:50;
     width: 250;
     border-bottom: 2px solid white;
@@ -186,8 +183,8 @@ input::-webkit-inner-spin-button {
 
 button{
     position: absolute;
-    top:400;
-    left:222px;
+    top:440;
+    left:180px;
     background-color:chocolate;
     cursor: pointer;
     width: 150;
