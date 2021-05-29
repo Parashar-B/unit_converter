@@ -40,13 +40,14 @@ p{
     border: 2px solid gray;
     border-radius: 50px;
     text-align: center;
+    padding:0%;
 }
 
 
 h2{
     position:absolute;
     left:5px;
-    margin: 0%;
+    top:-20px;
 }
 
 #light{
