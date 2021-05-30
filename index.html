@@ -8,10 +8,8 @@
     </head>
     <body onload="unit_l()">
         <div id="head"><h1>UNIT-CONVERTER</h1> <p>convert value unit wise</p></div>
-        <div id="mode">
-            <h2 id="light" onclick="dark_mode()">🔅</h2>
-            <h2 id="dark" onclick="light_mode()">🌙</h2>
-        </div>
+        <button class="mode" id="light" onclick="dark_mode()">🔅</button>
+        <button class="mode" id="dark" onclick="light_mode()">🌙</button>
         <div id="background_1"></div>
         <div id="background_2"></div>
         <div id="menu">
@@ -45,7 +43,7 @@
                     <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
-            <button onclick="check()">CONVERT</button>
+            <button id="convert_button" onclick="check()">CONVERT</button>
         </div>
         <p id="footer">MADE WITH <span id="peace">☮</span> BY PARASHAR-B</p>
     </body>
