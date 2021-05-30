@@ -13,7 +13,7 @@ function light_mode(){
     document.getElementsByClassName("in")[1].style.borderColor="black";
     document.getElementsByClassName("in")[1].style.color="black";
     document.getElementById("background_2").style.backgroundColor="lightgray";
-    document.getElementById("background_1").style.backgroundColor="lightgray";
+    document.getElementById("background_1").style.backgroundColor="gray";
 
     document.getElementById("light").style.visibility="visible";
     document.getElementById("dark").style.visibility="hidden";
@@ -30,7 +30,7 @@ function dark_mode(){
     document.getElementsByClassName("in")[1].style.borderColor="white";
     document.getElementsByClassName("in")[1].style.color="white";
     document.getElementById("background_2").style.backgroundColor="black";
-    document.getElementById("background_1").style.backgroundColor="black";
+    document.getElementById("background_1").style.backgroundColor="darkslategray";
 
     document.getElementById("light").style.visibility="hidden";
     document.getElementById("dark").style.visibility="visible";
