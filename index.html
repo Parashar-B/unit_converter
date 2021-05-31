@@ -31,8 +31,9 @@
                         <select id="fs"></select>
                     </td>
                     <td></td>
-                    <td><input class="in" id ="fi" type="number" placeholder="Enter value"></td>
-                    
+                    <td><input class="in" id ="fi" type="number" placeholder="Enter value">
+                        <button id="clear_input" onclick="clear_input_box()">x</button>
+                    </td>
                 </tr>
                 <tr id="blank"></tr>
                 <tr>
@@ -43,7 +44,7 @@
                     <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
-            <button id="convert_button" onclick="check()">CONVERT</button>
+            <button id="convert_button" onclick="convert()">CONVERT</button>
         </div>
         <p id="footer">MADE WITH <span id="peace">☮</span> BY PARASHAR-B</p>
     </body>
