@@ -1,5 +1,6 @@
-var m="DARK";
+
 var f="l"; // to know which domain(length/mass/...) is selected
+var input_value; //to store the value which need to convert 
 
 
 function light_mode(){
@@ -78,7 +79,7 @@ function remove_unit() // to remove option from drop-down UNIT and empty the lis
 
 function unit_l()   //it handles the unit of "LENGTH"
 {
-    var a=["Kilometer(km)","Meter(m)","Centimeter(cm)","Foot(ft)"];
+    var a=["Centimeter(cm)","Foot(ft)","Meter(m)","Kilometer(km)"];
     var i;
     var x=document.getElementById("fs");
     var w=document.getElementById("ts");
@@ -181,6 +182,18 @@ function unit_d() //it handles the unit of "DATA"
     f="d";
 }
 
-function check(){
-    
+function clear_input_box(){
+    document.getElementsByClassName("in")[0].value="";
+    document.getElementsByClassName("in")[1].value="";
+}
+
+function convert(){
+    input_value=document.getElementById("fi").value;
+    switch(f){
+        case "l" :  length_convert();break;
+    }
+}
+
+function length_convert(){
+    alert(document.getElementById("fs").value);
 }

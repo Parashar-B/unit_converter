@@ -37,9 +37,10 @@ p{
     width: 40px;
     height: 40px;
     border: 2px solid gray;
-    border-radius: 50px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: x-large;   
+    font-size: x-large; 
+    padding-top: 0px;
 }
 
 .mode:hover{
@@ -166,6 +167,7 @@ td{
     border-top: transparent;
     color: white;
     font-size: medium;
+    padding-right: 30px;
 }
 input:focus{
     outline: none;
@@ -177,6 +179,17 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+#clear_input{
+    position: absolute;
+    top:96px;
+    left:448px;
+    color:orangered;
+    font-weight: bold;
+    background-color:transparent;
+    border:none;
+    cursor: pointer;
+    font-size:medium;
+}
 
 #convert_button{
     position: absolute;
