@@ -44,12 +44,12 @@ p{
 }
 
 .mode:hover{
-    box-shadow: 0px 2px 10px 2px gray;
+    box-shadow: 0px 0px 5px 2px gray;
 }
 
 #light{
     visibility:hidden;
-    color:#E8BD0D;
+    color:yellow;
 }
 
 #dark{
