@@ -74,7 +74,7 @@ select{
     width:175px;
     height: 340px;
     border-radius: 10px;
-    
+    z-index: -1;
 }
 
 #background_2{
@@ -85,13 +85,28 @@ select{
     width:485px;
     height: 290px;
     border-radius: 10px;
-    
+    z-index: 0;
+}
+
+#notifier{
+    position:absolute;
+    top:240px;
+    left:652px;
+    height: 20px;
+    width: 235px;
+    background-color:brown;
+    color: white;
+    text-align: center;
+    padding: 3px 8px 3px 8px;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1;
+    visibility: hidden;
 }
 
 
 #sub{
     margin-top: 10px;  
-    margin-left: 10px;; 
+    margin-left: 10px;
     width: 150px;
     height: 40px;
     background-color: #d2691e;
@@ -126,9 +141,9 @@ td{
 }
 
 .unit{
-    border:2px solid black;
+    
     border-radius: 5px;
-    background-color:#094059;
+    background-color:darkslategray;
     color: white;
 }
 
