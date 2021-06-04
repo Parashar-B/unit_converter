@@ -12,6 +12,7 @@
         <button class="mode" id="dark" onclick="light_mode()">🌙</button>
         <div id="background_1"></div>
         <div id="background_2"></div>
+        <div id="notifier">Nothing to Convert</div>
         <div id="menu">
             <table >
                 <tr>
@@ -27,17 +28,17 @@
                 </tr>
                 <tr id="small_blank"></tr>
                 <tr>
-                    <td class="unit">FROM
+                    <td class="unit">From
                         <select id="fs"></select>
                     </td>
                     <td></td>
-                    <td><input class="in" id ="fi" type="number" placeholder="Enter value">
+                    <td><input class="in" id ="fi" type="number" placeholder="Enter value" onclick="remove_notifier()">
                         <button id="clear_input" onclick="clear_input_box()">x</button>
                     </td>
                 </tr>
                 <tr id="blank"></tr>
                 <tr>
-                    <td class="unit">TO
+                    <td class="unit">To
                         <select id="ts"></select>
                     </td>
                     <td></td>
