@@ -15,6 +15,10 @@ function light_mode(){
     document.getElementsByClassName("in")[1].style.color="black";
     document.getElementById("background_2").style.backgroundColor="lightgray";
     document.getElementById("background_1").style.backgroundColor="gray";
+    document.getElementsByClassName("unit")[0].style.backgroundColor="gray";
+    document.getElementsByClassName("unit")[1].style.backgroundColor="gray";
+    document.getElementsByClassName("unit")[0].style.color="black";
+    document.getElementsByClassName("unit")[1].style.color="black";
 
     document.getElementById("light").style.visibility="visible";
     document.getElementById("dark").style.visibility="hidden";
@@ -32,6 +36,10 @@ function dark_mode(){
     document.getElementsByClassName("in")[1].style.color="white";
     document.getElementById("background_2").style.backgroundColor="black";
     document.getElementById("background_1").style.backgroundColor="darkslategray";
+    document.getElementsByClassName("unit")[0].style.backgroundColor="darkslategray";
+    document.getElementsByClassName("unit")[1].style.backgroundColor="darkslategray";
+    document.getElementsByClassName("unit")[0].style.color="white";
+    document.getElementsByClassName("unit")[1].style.color="white";
 
     document.getElementById("light").style.visibility="hidden";
     document.getElementById("dark").style.visibility="visible";
@@ -185,4 +193,9 @@ function unit_d() //it handles the unit of "DATA"
 function clear_input_box(){
     document.getElementsByClassName("in")[0].value="";
     document.getElementsByClassName("in")[1].value="";
+}
+
+function remove_notifier(){
+    if(document.getElementById("notifier").style.visibility=="visible")
+        document.getElementById("notifier").style.visibility="hidden";
 }
