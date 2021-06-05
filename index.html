@@ -12,7 +12,7 @@
         <button class="mode" id="dark" onclick="light_mode()">🌙</button>
         <div id="background_1"></div>
         <div id="background_2"></div>
-        <div id="notifier">Nothing to Convert</div>
+        
         <div id="menu">
             <table >
                 <tr>
@@ -29,23 +29,23 @@
                 <tr id="small_blank"></tr>
                 <tr>
                     <td class="unit">From
-                        <select id="fs"></select>
+                        <select id="fs" onchange="convert()"></select>
                     </td>
                     <td></td>
-                    <td><input class="in" id ="fi" type="number" placeholder="Enter value" onclick="remove_notifier()">
+                    <td><input class="in" id ="fi" type="number" placeholder="Enter value" oninput="convert()">
                         <button id="clear_input" onclick="clear_input_box()">x</button>
                     </td>
                 </tr>
                 <tr id="blank"></tr>
                 <tr>
                     <td class="unit">To
-                        <select id="ts"></select>
+                        <select id="ts" onchange="convert()"></select>
                     </td>
                     <td></td>
                     <td><input class="in" id="ti" type="number" disabled></td></td>
                 </tr>
             </table>
-            <button id="convert_button" onclick="convert()">CONVERT</button>
+            <button id="convert_button">CONVERT</button>
         </div>
         <p id="footer">MADE WITH <span id="peace">☮</span> BY PARASHAR-B</p>
     </body>
