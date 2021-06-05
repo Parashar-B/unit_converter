@@ -88,22 +88,6 @@ select{
     z-index: 0;
 }
 
-#notifier{
-    position:absolute;
-    top:240px;
-    left:652px;
-    height: 20px;
-    width: 235px;
-    background-color:brown;
-    color: white;
-    text-align: center;
-    padding: 3px 8px 3px 8px;
-    border-radius: 0px 0px 10px 10px;
-    z-index: 1;
-    visibility: hidden;
-}
-
-
 #sub{
     margin-top: 10px;  
     margin-left: 10px;
@@ -112,23 +96,22 @@ select{
     background-color: #d2691e;
     font-size:large;
     border: 1px solid chocolate;
-    border-radius: 5px;
+    border-radius: 5px 5px 2px 2px;
     margin: 0%;
 }
 
 
 option{
-    background-color:slategray;
-    color: black;
+    background-color:indigo;
+    color:white;
 }
 
 table{
     position:absolute;
     top:40px;
-    left:6px;
-    
-    
+    left:6px;  
 }
+
 #sub_cell{
     padding:0%;
     padding-left: 110px;
@@ -136,8 +119,7 @@ table{
 }
 
 td{
-    padding:10;
-    
+    padding:10px;    
 }
 
 .unit{
@@ -145,6 +127,8 @@ td{
     border-radius: 5px;
     background-color:darkslategray;
     color: white;
+    padding-left: 14px;
+    font-weight: bold;
 }
 
 #fs{
@@ -153,7 +137,8 @@ td{
     background-color: chocolate;
     font-size:large;
     border: 1px solid chocolate;
-    border-radius: 5px;
+    border-radius: 5px 5px 2px 2px;
+    
 }
 
 #ts{
@@ -162,7 +147,7 @@ td{
     background-color: chocolate;
     font-size:large;
     border: 1px solid chocolate;
-    border-radius: 5px;
+    border-radius: 5px 5px 2px 2px;
 }
 
 #blank{
