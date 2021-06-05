@@ -191,11 +191,6 @@ function unit_d() //it handles the unit of "DATA"
 }
 
 function clear_input_box(){
-    document.getElementsByClassName("in")[0].value="";
-    document.getElementsByClassName("in")[1].value="";
-}
-
-function remove_notifier(){
-    if(document.getElementById("notifier").style.visibility=="visible")
-        document.getElementById("notifier").style.visibility="hidden";
+    document.getElementsByClassName("in")[0].value=null;
+    document.getElementsByClassName("in")[1].value=null;
 }
