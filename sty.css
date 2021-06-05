@@ -29,10 +29,23 @@ p{
     width:480;
 }
 
+#hang_line{
+    position:absolute;
+    top:17px;
+    left:914px;
+    width:55px;
+    height:38px;
+    border:2px solid gray;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 0;
+}
+
 .mode{
     position: absolute;
-    left:950px;
-    top:20px;
+    left:930px;
+    top:18px;
     background-color:black;
     width: 40px;
     height: 40px;
@@ -40,7 +53,8 @@ p{
     border-radius: 50%;
     cursor: pointer;
     font-size: x-large; 
-    padding-top: 0px;
+    z-index: 1;
+    text-align: center;
 }
 
 .mode:hover{
@@ -83,10 +97,12 @@ select{
     left:429px;
     background-color:black;
     width:485px;
-    height: 290px;
+    height:340px;
     border-radius: 10px;
     z-index: 0;
 }
+
+
 
 #sub{
     margin-top: 10px;  
@@ -109,17 +125,19 @@ option{
 table{
     position:absolute;
     top:40px;
-    left:6px;  
+    left:24px;  
+    
 }
 
 #sub_cell{
     padding:0%;
-    padding-left: 110px;
+    padding-left:102px;
     
 }
 
 td{
     padding:10px;    
+    
 }
 
 .unit{
@@ -127,8 +145,9 @@ td{
     border-radius: 5px;
     background-color:darkslategray;
     color: white;
-    padding-left: 14px;
+    padding-left: 10px;
     font-weight: bold;
+    width:100px;
 }
 
 #fs{
@@ -151,16 +170,16 @@ td{
 }
 
 #blank{
-    height:90;
+    height:120;
 }
 #small_blank{
-    height:20px;
+    height:32px;
 }
 
 .in{
     background: transparent;
     height:50;
-    width: 250;
+    width: 220;
     border-bottom: 2px solid white;
     border-left: transparent;
     border-right: transparent;
@@ -181,8 +200,8 @@ input::-webkit-inner-spin-button {
 
 #clear_input{
     position: absolute;
-    top:96px;
-    left:448px;
+    top:106px;
+    left:408px;
     color:orangered;
     font-weight: bold;
     background-color:transparent;
@@ -191,23 +210,8 @@ input::-webkit-inner-spin-button {
     font-size:medium;
 }
 
-#convert_button{
-    position: absolute;
-    top:440;
-    left:180px;
-    background-color:chocolate;
-    cursor: pointer;
-    width: 150;
-    height:40;
-    font-size: large;
-    border-radius: 10px;
-    border-width: 5px;
-}
 button:focus{
     outline: none;
-}
-#convert_button:hover{
-    box-shadow: 0 2px 3px 0 #5C6464, 0 2px 3px 0 #5C6464;
 }
 
 #peace{
