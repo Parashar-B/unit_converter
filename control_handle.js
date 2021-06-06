@@ -19,6 +19,7 @@ function light_mode(){
     document.getElementsByClassName("unit")[1].style.backgroundColor="gray";
     document.getElementsByClassName("unit")[0].style.color="black";
     document.getElementsByClassName("unit")[1].style.color="black";
+    document.getElementById("swap").style.color="black";
 
     document.getElementById("light").style.visibility="visible";
     document.getElementById("dark").style.visibility="hidden";
@@ -40,6 +41,7 @@ function dark_mode(){
     document.getElementsByClassName("unit")[1].style.backgroundColor="darkslategray";
     document.getElementsByClassName("unit")[0].style.color="white";
     document.getElementsByClassName("unit")[1].style.color="white";
+    document.getElementById("swap").style.color="white";
 
     document.getElementById("light").style.visibility="hidden";
     document.getElementById("dark").style.visibility="visible";
