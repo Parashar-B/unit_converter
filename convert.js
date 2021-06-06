@@ -1,8 +1,17 @@
+function swap_value(){
+    document.getElementById("fi").value=document.getElementById("ti").value;
+    convert();
+}
+
 function convert(){
     input_value=document.getElementById("fi").value;
-    if(input_value==0)
-        {document.getElementById("ti").value=null;
-        return;}
+    if(document.getElementById("fi").value==null || input_value==""){
+        document.getElementById("ti").value=null;
+        return;
+    }
+    else if(document.getElementById("fs").value == document.getElementById("ts").value){
+        document.getElementById("ti").value=document.getElementById("fi").value;
+    }
     else{
         switch(document.getElementById("sub").value){
             case "length" : length_convert();break;
@@ -15,10 +24,9 @@ function convert(){
     }
 }
 
+// functions for handling LENGTH convert task
 function length_convert(){
-    if(document.getElementById("fs").value == document.getElementById("ts").value)
-        document.getElementById("ti").value=document.getElementById("fi").value;
-    else if(document.getElementById("fs").value=="Centimeter(cm)")
+    if(document.getElementById("fs").value=="Centimeter(cm)")
         convert_cm();
     else if(document.getElementById("fs").value=="Foot(ft)")
         convert_ft();
@@ -32,9 +40,9 @@ function length_convert(){
 function convert_cm(){
     var x=document.getElementById("ts").value;
     switch(x){
-        case "Foot(ft)" : document.getElementById("ti").value=input_value*0.0328084;break;
-        case "Meter(m)" : document.getElementById("ti").value=input_value*0.01;break;
-        case "Kilometer(km)" : document.getElementById("ti").value=input_value*1e-5;break;
+        case "Foot(ft)" : document.getElementById("ti").value=input_value/30.48;break;
+        case "Meter(m)" : document.getElementById("ti").value=input_value/100;break;
+        case "Kilometer(km)" : document.getElementById("ti").value=input_value/100000;break;
     }
 }
 
@@ -42,8 +50,8 @@ function convert_ft(){
     var x=document.getElementById("ts").value;
     switch(x){
         case "Centimeter(cm)" : document.getElementById("ti").value=input_value*30.48;break;
-        case "Meter(m)" : document.getElementById("ti").value=input_value*0.3048;break;
-        case "Kilometer(km)" : document.getElementById("ti").value=input_value*0.0003048;break;
+        case "Meter(m)" : document.getElementById("ti").value=input_value/3.281;break;
+        case "Kilometer(km)" : document.getElementById("ti").value=input_value/3281;break;
     }
 }
 
@@ -51,8 +59,8 @@ function convert_m(){
     var x=document.getElementById("ts").value;
     switch(x){
         case "Centimeter(cm)" : document.getElementById("ti").value=input_value*100;break;
-        case "Foot(ft)" : document.getElementById("ti").value=input_value*3.28084;break;
-        case "Kilometer(km)" : document.getElementById("ti").value=input_value*0.001;break;
+        case "Foot(ft)" : document.getElementById("ti").value=input_value*3.281;break;
+        case "Kilometer(km)" : document.getElementById("ti").value=input_value/1000;break;
     }
 }
 
@@ -60,7 +68,41 @@ function convert_km(){
     var x=document.getElementById("ts").value;
     switch(x){
         case "Centimeter(cm)" : document.getElementById("ti").value=input_value*100000;break;
-        case "Foot(ft)" : document.getElementById("ti").value=input_value*3280.84;break;
+        case "Foot(ft)" : document.getElementById("ti").value=input_value*3281;break;
         case "Meter(m)" : document.getElementById("ti").value=input_value*1000;break;
+    }
+}
+
+//functions for handling TEMPERATURE convert task
+function temperature_convert(){
+    if(document.getElementById("fs").value=="Celsius(°C)")
+        convert_celsi();
+    else if(document.getElementById("fs").value=="Fahrenheit(°F)")
+        convert_fahren();
+    else
+        convert_kelvin();
+}
+
+function convert_celsi(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Fahrenheit(°F)" : document.getElementById("ti").value=(input_value*9/5)+32;break;
+        case "Kelvin(°K)" : document.getElementById("ti").value=parseInt(input_value)+273.15;break;
+    }
+}
+
+function convert_fahren(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Celsius(°C)" : document.getElementById("ti").value=(input_value-32)*5/9;break;
+        case "Kelvin(°K)" : document.getElementById("ti").value=(input_value-32)*5/9+273.15;break;
+    }
+}
+
+function convert_kelvin(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Celsius(°C)" : document.getElementById("ti").value=input_value-273.15;break;
+        case "Fahrenheit(°F)" : document.getElementById("ti").value=(input_value-273.15)*9/5+32;break;
     }
 }
