@@ -106,3 +106,101 @@ function convert_kelvin(){
         case "Fahrenheit(°F)" : document.getElementById("ti").value=(input_value-273.15)*9/5+32;break;
     }
 }
+
+//functions for handling MASS convert task
+function mass_convert(){
+    if(document.getElementById("fs").value=="Kilogram(kg)")
+        convert_kg();
+    else if(document.getElementById("fs").value=="Gram(gm)")
+        convert_gm();
+    else if(document.getElementById("fs").value=="Milligram(mg)")
+        convert_mg();
+    else if(document.getElementById("fs").value=="Pound(lb)")
+        convert_lb();
+    else
+        convert_t();
+}
+
+function convert_kg(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Gram(gm)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Milligram(mg)" : document.getElementById("ti").value=input_value*1e+6;break;
+        case "Pound(lb)" : document.getElementById("ti").value=input_value*2.205;break;
+        case "Tonne(t)" : document.getElementById("ti").value=input_value/1000;break;
+    }
+}
+
+function convert_gm(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Kilogram(kg)" : document.getElementById("ti").value=input_value/1000;break;
+        case "Milligram(mg)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Pound(lb)" : document.getElementById("ti").value=input_value/454;break;
+        case "Tonne(t)" : document.getElementById("ti").value=input_value/1e+6;break;
+    }
+}
+
+function convert_mg(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Kilogram(kg)" : document.getElementById("ti").value=input_value/1e+6;break;
+        case "Gram(gm)" : document.getElementById("ti").value=input_value/1000;break;
+        case "Pound(lb)" : document.getElementById("ti").value=input_value/453592;break;
+        case "Tonne(t)" : document.getElementById("ti").value=input_value/1e+9;break;
+    }
+}
+
+function convert_lb(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Kilogram(kg)" : document.getElementById("ti").value=input_value/2.205;break;
+        case "Gram(gm)" : document.getElementById("ti").value=input_value*454;break;
+        case "Milligram(mg)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Tonne(t)" : document.getElementById("ti").value=input_value/1e+6;break;
+    }
+}
+
+function convert_t(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Kilogram(kg)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Gram(gm)" : document.getElementById("ti").value=input_value*1e+6;break;
+        case "Milligram(mg)" : document.getElementById("ti").value=input_value*1e+9;break;
+        case "Pound(lb)" : document.getElementById("ti").value=input_value*2205;break;
+    }
+}
+
+//functions for handling TIME convert task
+function time_convert(){
+    if(document.getElementById("fs").value=="Second(s)")
+        convert_s();
+    else if(document.getElementById("fs").value=="Minute(min)")
+        convert_min();
+    else
+        convert_hr();
+}
+
+function convert_s(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Minute(min)" : document.getElementById("ti").value=input_value/60;break;
+        case "Hour(hr)" : document.getElementById("ti").value=input_value/3600;break;
+    }
+}
+
+function convert_min(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Second(s)" : document.getElementById("ti").value=input_value*60;break;
+        case "Hour(hr)" : document.getElementById("ti").value=input_value/60;break;
+    }
+}
+
+function convert_hr(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Second(s)" : document.getElementById("ti").value=input_value*3600;break;
+        case "Minute(min)" : document.getElementById("ti").value=input_value*60;break;
+    }
+}
