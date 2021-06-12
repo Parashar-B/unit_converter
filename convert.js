@@ -204,3 +204,67 @@ function convert_hr(){
         case "Minute(min)" : document.getElementById("ti").value=input_value*60;break;
     }
 }
+
+//functions for handling DATA convert task
+function data_convert(){
+    if(document.getElementById("fs").value=="Byte(B)")
+        convert_B();
+    else if(document.getElementById("fs").value=="Kilobyte(KB)")
+        convert_KB();
+    else if(document.getElementById("fs").value=="Megabyte(MB)")
+        convert_MB();
+    else if(document.getElementById("fs").value=="Gigabyte(GB)")
+        convert_GB();
+    else
+        convert_TB();
+}
+
+function convert_B(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Kilobyte(KB)" : document.getElementById("ti").value=input_value/1000;break;
+        case "Megabyte(MB)" : document.getElementById("ti").value=input_value/1e+6;break;
+        case "Gigabyte(GB)" : document.getElementById("ti").value=input_value/1e+9;break;
+        case "Terabyte(TB)" : document.getElementById("ti").value=input_value/1e+12;break;
+    }
+}
+
+function convert_KB(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Byte(B)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Megabyte(MB)" : document.getElementById("ti").value=input_value/1000;break;
+        case "Gigabyte(GB)" : document.getElementById("ti").value=input_value/1e+6;break;
+        case "Terabyte(TB)" : document.getElementById("ti").value=input_value/1e+9;break;
+    }
+}
+
+function convert_MB(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Byte(B)" : document.getElementById("ti").value=input_value*1e+6;break;
+        case "Kilobyte(KB)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Gigabyte(GB)" : document.getElementById("ti").value=input_value/1000;break;
+        case "Terabyte(TB)" : document.getElementById("ti").value=input_value/1e+6;break;
+    }
+}
+
+function convert_GB(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Byte(B)" : document.getElementById("ti").value=input_value*1e+9;break;
+        case "Kilobyte(KB)" : document.getElementById("ti").value=input_value*1e+6;break;
+        case "Megabyte(MB)" : document.getElementById("ti").value=input_value*1000;break;
+        case "Terabyte(TB)" : document.getElementById("ti").value=input_value/1000;break;
+    }
+}
+
+function convert_TB(){
+    var x=document.getElementById("ts").value;
+    switch(x){
+        case "Byte(B)" : document.getElementById("ti").value=input_value*1e+12;break;
+        case "Kilobyte(KB)" : document.getElementById("ti").value=input_value*1e+9;break;
+        case "Megabyte(MB)" : document.getElementById("ti").value=input_value*1e+6;break;
+        case "Gigabyte(GB)" : document.getElementById("ti").value=input_value*1000;break;
+    }
+}
